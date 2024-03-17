@@ -12,11 +12,7 @@ public class LoadBalancerApplication {
     }
 
     private static void loadBalance() {
-        doGetServer(new RoundRobin());
-    }
-
-    private static void doGetServer(LoadBalance loadBalance) {
-        doGetServer(loadBalance, 20);
+        doGetServer(new RoundRobin(), 20);
     }
 
     private static void doGetServer(LoadBalance loadBalance, int queryTimes) {
